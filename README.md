@@ -3,5 +3,7 @@
 [Gitbook](https://app.gitbook.com/@bhyean/s/algorithm/)
 
 ## 1. Searching
-####Iterative Binary Search
-####Recursive Binary Search
+```bash
+1 Binary Search
+2 Jump Search
+```
