@@ -8,4 +8,5 @@
 3 Exponential Search
 2 Jump Search
 4 Fibonacci Search
+5 Interpolation search
 ```
