@@ -10,3 +10,10 @@
 4 Fibonacci Search
 5 Interpolation search
 ```
+
+## 1. Sorting
+```bash
+1 Selection Sort
+3 Bubble Sort
+2 Insertion Sort
+```
