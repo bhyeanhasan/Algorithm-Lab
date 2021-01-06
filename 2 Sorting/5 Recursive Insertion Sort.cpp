@@ -10,23 +10,25 @@
 #define show(arr) for( auto &it : arr ) cout<<it<<" "
 using namespace std;
 
-int InsertionSort(int valu[],int n)
+int RecInsertionSort(int arr[],int n)
 {
+    if (n < 1)
+        return 0;
 
-    for(int i=1; i<n; i++)
+    RecInsertionSort( arr, n-1 );
+
+    // rec er por sru hobe n=1 theke
+
+    int last = arr[n];
+    int j = n-1;
+
+
+    while (j >= 0 && arr[j] > last)
     {
-
-        int selected_position = valu[i];
-        int compair_position = i-1;
-
-        while(compair_position>=0 && valu[compair_position] > selected_position)
-        {
-            valu[compair_position+1] = valu[compair_position];
-            compair_position = compair_position - 1;
-        }
-
-        valu[compair_position+1] = selected_position; //ek index agaya blank jaygay bose
+        arr[j+1] = arr[j];
+        j--;
     }
+    arr[j+1] = last;
 }
 
 int main()
@@ -34,7 +36,7 @@ int main()
     int valu[] = {5,8,4,2,1,3,9,7,4,5,3,7,1,400,500,55};
     int n = sizeof(valu)/sizeof(valu[0]);
 
-    InsertionSort(valu,n);
+    RecInsertionSort(valu,n);
 
     show(valu);
     return 0;
